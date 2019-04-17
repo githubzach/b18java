@@ -57,8 +57,14 @@ public class Student1{
 		
 	}
 
+	public int add(int a, int b) {
+		return a+b;
+	}
 
 	public void displayRecord(){
+		int a = 10;
+		int b = 20;
+		System.out.println(add(a, b));
 		System.out.println("name = " + name + "\nid = " + rollNo + "\nCollege name: " + college);
 	}
 

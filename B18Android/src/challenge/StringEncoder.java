@@ -61,9 +61,20 @@ public class StringEncoder {
 		return str;
 	}
 	
+	public static int reverseNum(int num) {
+		
+		int rev = 0;
+		while(num!=0) {
+			rev = rev * 10 + num % 10;
+			num /= 10;
+		}
+		return rev;
+	}
+	
 	
 	public static void main(String[] args) {
 		String in = "Hello World!";
+		String in2 = "Why haven't you finished the exercise yet?\" said Nate";
 		in = in.toLowerCase();
 		//Expect Output:g2kk4yv4qkc
 		in = encodeVowels(in);
@@ -72,5 +83,17 @@ public class StringEncoder {
 		in = encoderNumbers(in);
 		in = encoderPunc(in);
 		System.out.println(in);
+		
+		in2 = encodeVowels(in2);
+		in2 = encodeYs(in2);
+		in2 = encodeConsonants(in2);
+		in2 = encoderNumbers(in2);
+		in2 = encoderPunc(in2);
+		System.out.println(in2);
+		
+		//reverse number:
+//		int a = 579;
+//		int rv = reverseNum(a);
+//		System.out.println(rv);
 	}
 }
